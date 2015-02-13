@@ -421,20 +421,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/JavaScript">
-
-    	// Javascript to enable link to tab
-		var url = document.location.toString();
-		if (url.match('#')) {
-		    $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
-		    window.scrollTo(0, 0);
-		} 
-
-		// Change hash for page-reload
-		$('.nav-tabs a').on('shown.bs.tab', function (e) {
-		    window.location.hash = e.target.hash;
-		});
-
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
