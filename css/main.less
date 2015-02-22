@@ -1,7 +1,40 @@
 @import "color-palette.less";
 
 body {
+	color: @color-text;
 	background-color: @color-primary-2;
+}
+h1 {
+	margin-top: 0.5em;
+	font-size: 3em;
+	color: @color-primary-5;
+	text-shadow: 1px 1px @color-secondary-1-4;
+	small {
+		font-size: 55%;
+		color: @color-primary-5;
+	}
+
+	@media only screen and (min-width : 768px) {
+		margin-top: 1em;
+		font-size: 4.25em;
+		line-height: .75em;
+	}
+}
+
+#banner {
+	@media only screen and (min-width : 480px) {
+		height: 300px;
+		background: @color-primary-2 url("../img/banner.png") no-repeat right top;
+		position: relative;
+		.nav-tabs {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}
+
+#footer {
+	margin-top: 40px;
 }
 .panel-default {
 	border-color: @color-secondary-2-1;
@@ -11,15 +44,25 @@ body {
 	border-color: @color-secondary-2-1;
 }
 .panel-default>.panel-body {
-	background-color: @color-secondary-1-0;
+	background-color: @color-primary-5;
+}
+.tab-pane>.container {
+	background-color: @color-primary-5;
+	border-radius: 20px;
+	border: 4px solid  @color-primary-3;
 }
 .well {
 	background-color: @color-primary-3;
 	border-color: @color-primary-4;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #333;
 	color: @color-secondary-1-1;
 	a {
 		color: @color-secondary-1-4;
 	}
+}
+.nav-tabs.nav-justified {
+	width: 96%;
 }
 .panel-title a {
 	display: inline-block;
