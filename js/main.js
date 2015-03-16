@@ -44,11 +44,13 @@ $(document).ready(function(){
                 'email'    		: $('input[name=email]').val(), 
                 'phone'  		: $('input[name=phone]').val(), 
                 'subject'       : $('select[name=subject]').val(), 
-                'body'          : $('textarea[name=body]').val()
+                'body'          : $('textarea[name=body]').val(),
+                'recaptcha_challenge_field' : $('input[name=recaptcha_challenge_field]').val(),
+                'recaptcha_response_field' : $('input[name=recaptcha_response_field]').val()
             };
             
             //Ajax post data to server
-            $.post('http://wendyguidi.com/DEV/mailout.php', post_data, function(response){  
+            $.post('mailout.php', post_data, function(response){  
                 if(response.type == 'error'){ //load json data from server and output message     
                     output = '<div class="error">'+response.text+'</div>';
                 }else{

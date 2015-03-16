@@ -1,5 +1,27 @@
 <?php
-
+    if($_SERVER['HTTP_ORIGIN'] == "http://wendyguidi.com")
+    {
+        header('Access-Control-Allow-Origin: http://wendyguidi.com');
+    }
+    else
+    {    
+        header('Content-Type: text/html');
+        echo "<html>";
+        echo "<head>";
+        echo "   <title>Mailout Function</title>";
+        echo "</head>";
+        echo "<body>",
+            "<p>This resource behaves two-fold:";
+        echo "<ul>",
+                "<li>If accessed from <code>http://wendyguidi.com</code> it performs its function.</li>";
+        echo " <li>If accessed from any other origin including from simply typing in the URL into the browser's address bar,";
+        echo "you get this HTML document</li>", 
+            "</ul>",
+        "</body>",
+        "</html>";
+        die();
+    }
+    
     // http://www.sanwebe.com/2011/12/making-simple-jquery-ajax-contact-form
 
     require_once('recaptchalib.php');
@@ -8,11 +30,6 @@
 
 if($_POST)
 {    
-    if (strpos($_SERVER['HTTP_REFERER'], "wendyguidi.com") === false) {
-        $output = json_encode(array('type'=>'error', 'text' =>"Cannot send mail - Unauthorized access"));
-        die($output);
-    }
-
     //check if its an ajax request, exit if not
     if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
         
@@ -41,7 +58,7 @@ if($_POST)
     $phone          = filter_var($_POST["phone"], FILTER_SANITIZE_NUMBER_INT);
     $sender_name    = filter_var($_POST["sender_name"], FILTER_SANITIZE_STRING);
     switch ($subject) {
-        case "Web Page Comment":
+        case "Webmaster":
             $to_email = "john@wendyguidi.com";    
             break;
         case "Request for Information":
@@ -80,15 +97,15 @@ if($_POST)
         $ip=getenv(REMOTE_ADDR); 
     }
     
-    $sender = "\"$sender_name [".$email."]\"";
+    $sender = "$sender_name <".$email.">";
 
     //email body
-    $message_body = "\nComments from www.wendyguidi.com from $sender_name :\n\n" .
-                    "----------------\n$body\n----------------\nPhone Number: ".$phone."\nIP:$ip";
+    $message_body = "Message to www.wendyguidi.com from $sender_name :\n" .
+                    "----------------\n\n$body\n\n----------------\nPhone Number: ".$phone."\nIP:$ip\n";
 
     //proceed with PHP email.
-    $headers = 'From: '.$sender.'' . "\r\n" .
-    'Reply-To: '.$email.'' . "\r\n" .
+    $headers = 'From: '.$email.'' . "\r\n" .
+    'Reply-To: '. $sender . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
     
     $send_mail = mail($to_email, "[wendyguidi.com] " . $subject, $message_body, $headers);
@@ -99,7 +116,7 @@ if($_POST)
         $output = json_encode(array('type'=>'error', 'text' => 'Could not send mail! Please check your PHP mail configuration.'));
         die($output);
     }else{
-        $output = json_encode(array('type'=>'message', 'text' => 'Hi '.$sender_name .' Thank you for your email'));
+        $output = json_encode(array('type'=>'message', 'text' => 'Hi '.$sender_name .'!<br/> Thank you for your email'));
         die($output);
     }
 }
