@@ -3,12 +3,18 @@ $(document).ready(function(){
 	var url = document.location.toString();
 	if (url.match('#')) {
 	    $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
+	    history.pushState( null, null, $(this).attr('href') );
 	    window.scrollTo(0, 0);
 	} 
 
 	// Change hash for page-reload
 	$('.nav-tabs a').on('shown.bs.tab', function (e) {
 	    window.location.hash = e.target.hash;
+	    history.pushState( null, null, $(this).attr('href') );
+	});
+
+	$('.nav-tabs li a').click( function(e) {
+		history.pushState( null, null, $(this).attr('href') );
 	});
 
     $("#submit_btn").click(function() { 
@@ -42,16 +48,16 @@ $(document).ready(function(){
             };
             
             //Ajax post data to server
-            $.post('mailout.php', post_data, function(response){  
+            $.post('http://wendyguidi.com/DEV/mailout.php', post_data, function(response){  
                 if(response.type == 'error'){ //load json data from server and output message     
                     output = '<div class="error">'+response.text+'</div>';
                 }else{
                     output = '<div class="success">'+response.text+'</div>';
                     //reset values in all input fields
                     $("#contact  input[required=true], #contact textarea[required=true]").val(''); 
-                    $("#contact #contact_body").slideUp(); //hide form after success
+                    $("#contact #contactBody").slideUp(); //hide form after success
                 }
-                $("#contact #contact_results").hide().html(output).slideDown();
+                $("#contact #contactResults").hide().html(output).slideDown();
             }, 'json');
         }
     });

@@ -35,7 +35,8 @@
             <div class="col-xs-12">
              <ul>
               <li>Rehabilitation of Injury (sports, motor vehicle accident, over-use, etc.)</li>
-              <li>Pre and Post Pregnancy Post-Surgical Rehabilitation</li>
+              <li>Pre and Post Pregnancy</li>
+              <li>Post-Surgical Rehabilitation</li>
               <li>Migraines</li>
               <li>Postural Retraining</li>
               <li>Exercise Therapy</li>
@@ -53,7 +54,7 @@
 			<p>We also offer a range of massage products including massage cream and gift certificates.</p>
 			<p>Wendy is dedicated, highly skilled, and provides attentive professional massage therapy.</p>
 			<ul>
-				<li>20 years experience in rehab</li>
+				<li>23 years experience in rehab</li>
 				<li>2200 hours in training</li>
 				<li>8 levels of CranioSacral Therapy training</li>
 				<li>Immune Response Work (CST)</li>
@@ -341,6 +342,7 @@
           <div class="row">
             <div class="col-xs-12">
             <h2>Contact</h2>
+            <div id="contactBody">
 		    <form class="form-horizontal">
 
 	          	<div class="form-group">
@@ -382,15 +384,31 @@
 		        		<textarea class="form-control" required="true" id="messagebody" name="body" placeholder="Your Message" rows="5" cols="55"></textarea>
 		        	</div>
 		        </div>
+
+		        <div class="form-group">
+		        	<label for="recaptcha_challenge_field" class="control-label col-xs-12 col-sm-2">Verification</label>
+		        	<div class="col-xs-12 col-sm-5">
+		        		<script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6LdXse8SAAAAAFyhC2tRTXiDRqYzig7u5BUYqaRf"></script>
+
+						<noscript>
+					  		<iframe src="http://www.google.com/recaptcha/api/noscript?k=6LdXse8SAAAAAFyhC2tRTXiDRqYzig7u5BUYqaRf" height="300" width="500" frameborder="0"></iframe><br/>
+					  		<textarea name="recaptcha_challenge_field" rows="3" cols="40" id="recaptcha_challenge_field"></textarea>
+					  		<input type="hidden" name="recaptcha_response_field" value="manual_challenge"/>
+						</noscript>
+		        	</div>
+		        </div>
 		        
 		        <div class="form-group">
 		            <div class="col-xs-offset-3 col-xs-9">
-		                <input type="submit" class="btn btn-primary" id="submit_btn" value="Submit">
+		                <input type="button" class="btn btn-primary" id="submit_btn" value="Submit">
 		                <input type="reset" class="btn btn-default" value="Reset">
 		            </div>
 		        </div>
 
 		    </form>
+		    </div>
+		    <div id="contactResults">
+		    </div>
         </div>
      </div>
 	  	<div class="row">
