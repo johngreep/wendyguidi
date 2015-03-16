@@ -358,34 +358,34 @@
 		        <div class="form-group">
 		            <label for="sender_name" class="control-label col-xs-12 col-sm-2">Name</label>
 		            <div class="col-xs-12 col-sm-5">
-		                <input type="text" class="form-control" id="sender_name" placeholder="Your Name" size="30,1" maxlength="50">
+		                <input type="text" class="form-control" required="true"  id="sender_name" name="sender_name" placeholder="Your Name" size="30,1" maxlength="50">
 		            </div>
 		        </div>
 		        
 		        <div class="form-group">
 		            <label for="inputEmail" class="control-label col-xs-12 col-sm-2">Email</label>
 		            <div class="col-xs-12 col-sm-5">
-		                <input type="email" class="form-control" id="inputEmail" placeholder="Your Email" size="30,1" maxlength="50">
+		                <input type="email" class="form-control" required="true" id="inputEmail" name="email" placeholder="Your Email" size="30,1" maxlength="50">
 		            </div>
 		        </div>
 
 		        <div class="form-group">
 		            <label for="phone" class="control-label col-xs-12 col-sm-2">Phone</label>
 		            <div class="col-xs-12 col-sm-5">
-		                <input type="tel" class="form-control" id="phone" placeholder="Your Phone Number" size="15,1" maxlength="15">
+		                <input type="tel" class="form-control" required="true" id="phone" name="phone" placeholder="Your Phone Number" size="15,1" maxlength="15">
 		            </div>
 		        </div>
 
 				<div class="form-group">
 		            <label for="messagebody" class="control-label col-xs-12 col-sm-2">Message</label>
 		            <div class="col-xs-12 col-sm-5">
-		        		<textarea class="form-control" id="messagebody" name="body" placeholder="Your Message" rows="5" cols="55"></textarea>
+		        		<textarea class="form-control" required="true" id="messagebody" name="body" placeholder="Your Message" rows="5" cols="55"></textarea>
 		        	</div>
 		        </div>
 		        
 		        <div class="form-group">
 		            <div class="col-xs-offset-3 col-xs-9">
-		                <input type="submit" class="btn btn-primary" value="Submit">
+		                <input type="submit" class="btn btn-primary" id="submit_btn" value="Submit">
 		                <input type="reset" class="btn btn-default" value="Reset">
 		            </div>
 		        </div>
