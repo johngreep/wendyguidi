@@ -17,6 +17,30 @@ $(document).ready(function(){
 		history.pushState( null, null, $(this).attr('href') );
 	});
 
+	$('#contactForm').validate({
+			rules: {
+				sender_name: "required",
+				inputEmail: {
+					required: true,
+					email: true
+				},
+				phone: {
+					required: true,
+					phoneUS: true
+				},
+				messagebody: {
+					required: true,
+					minlength: 3
+				}
+			},
+			messages: {
+				firstname: "Please enter your name",
+				inputEmail: "Please enter a valid email address",
+				phone: "Please enter a valid phone number",
+				messagebody: "Please tell us something"
+			}
+		}
+	);
 	$("#submit_btn").click(function() { 
 	   
 		var proceed = true;
