@@ -17,6 +17,24 @@ $(document).ready(function(){
 		history.pushState( null, null, $(this).attr('href') );
 	});
 
+	$.validator.setDefaults({
+	    highlight: function(element) {
+	        $(element).closest('.form-group').addClass('has-error');
+	    },
+	    unhighlight: function(element) {
+	        $(element).closest('.form-group').removeClass('has-error');
+	    },
+	    errorElement: 'span',
+	    errorClass: 'help-block',
+	    errorPlacement: function(error, element) {
+	        if(element.parent('.input-group').length) {
+	            error.insertAfter(element.parent());
+	        } else {
+	            error.insertAfter(element);
+	        }
+	    }
+	});
+
 	$('#contactForm').validate({
 			rules: {
 				sender_name: "required",
@@ -34,59 +52,46 @@ $(document).ready(function(){
 				}
 			},
 			messages: {
-				firstname: "Please enter your name",
-				inputEmail: "Please enter a valid email address",
-				phone: "Please enter a valid phone number",
+				sender_name: "Please enter your name",
+				inputEmail: {
+					required: "We would like your email address so that we can respond",
+					email: "Please enter a valid email address"
+				},
+				phone: {
+					required: "A phone number is required",
+					phoneUS: "Please enter a valid phone number"
+				},
 				messagebody: "Please tell us something"
-			}
+			},
+			submitHandler: function (form) {
+				//get input field values data to be sent to server
+				post_data = {
+					'sender_name'   : $('input[name=sender_name]').val(), 
+					'email'    		: $('input[name=email]').val(), 
+					'phone'  		: $('input[name=phone]').val(), 
+					'subject'       : $('select[name=subject]').val(), 
+					'body'          : $('textarea[name=messagebody]').val(),
+					'recaptcha_challenge_field' : $('input[name=recaptcha_challenge_field]').val(),
+					'recaptcha_response_field' : $('input[name=recaptcha_response_field]').val()
+				};
+				
+				//Ajax post data to server
+				$.post('mailout.php', post_data, function(response){  
+					if(response.type == 'error'){ //load json data from server and output message     
+						output = '<div class="error">'+response.text+'</div>';
+					}else{
+						output = '<div class="success">'+response.text+'</div>';
+						//reset values in all input fields
+						$("#contact  input[required=true], #contact textarea[required=true]").val(''); 
+						$("#contact #contactBody").slideUp(); //hide form after success
+					}
+					$("#contact #contactResults").hide().html(output).slideDown();
+				}, 'json');
+
+				return false;
+			},
 		}
 	);
-	$("#submit_btn").click(function() { 
-	   
-		var proceed = true;
-		//simple validation at client's end
-		//loop through each field and we simply change border color to red for invalid fields       
-		$("#contact input[required=true], #contact textarea[required=true]").each(function(){
-			$(this).css('border-color',''); 
-			if(!$.trim($(this).val())){ //if this field is empty 
-				$(this).css('border-color','red'); //change border color to red   
-				proceed = false; //set do not proceed flag
-			}
-			//check invalid email
-			var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; 
-			if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
-				$(this).css('border-color','red'); //change border color to red   
-				proceed = false; //set do not proceed flag              
-			}
-		});
-	   
-		if(proceed) //everything looks good! proceed...
-		{
-			//get input field values data to be sent to server
-			post_data = {
-				'sender_name'   : $('input[name=sender_name]').val(), 
-				'email'    		: $('input[name=email]').val(), 
-				'phone'  		: $('input[name=phone]').val(), 
-				'subject'       : $('select[name=subject]').val(), 
-				'body'          : $('textarea[name=body]').val(),
-				'recaptcha_challenge_field' : $('input[name=recaptcha_challenge_field]').val(),
-				'recaptcha_response_field' : $('input[name=recaptcha_response_field]').val()
-			};
-			
-			//Ajax post data to server
-			$.post('mailout.php', post_data, function(response){  
-				if(response.type == 'error'){ //load json data from server and output message     
-					output = '<div class="error">'+response.text+'</div>';
-				}else{
-					output = '<div class="success">'+response.text+'</div>';
-					//reset values in all input fields
-					$("#contact  input[required=true], #contact textarea[required=true]").val(''); 
-					$("#contact #contactBody").slideUp(); //hide form after success
-				}
-				$("#contact #contactResults").hide().html(output).slideDown();
-			}, 'json');
-		}
-	});
 	
 	//reset previously set border colors and hide all message on .keyup()
 	$("#contact  input[required=true], #contact textarea[required=true]").keyup(function() { 

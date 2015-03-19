@@ -346,7 +346,7 @@
 			<div class="col-xs-12">
 			<h2>Contact</h2>
 			<div id="contactBody">
-			<form id ="contactForm" class="form-horizontal">
+			<form id ="contactForm" class="form-horizontal" method="post" action="">
 
 				<div class="form-group">
 					<label for="subject" class="control-label col-xs-12 col-sm-2">Subject</label>
@@ -370,21 +370,21 @@
 				<div class="form-group">
 					<label for="inputEmail" class="control-label col-xs-12 col-sm-2">Email</label>
 					<div class="col-xs-12 col-sm-5">
-						<input type="email" class="form-control" required="true" id="inputEmail" name="email" placeholder="Your Email" size="30,1" maxlength="50">
+						<input type="email" class="form-control" required="true" id="inputEmail" name="email" placeholder="example@domain.com" size="30,1" maxlength="50">
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label for="phone" class="control-label col-xs-12 col-sm-2">Phone</label>
 					<div class="col-xs-12 col-sm-5">
-						<input type="tel" class="form-control" required="true" id="phone" name="phone" placeholder="Your Phone Number" size="15,1" maxlength="15">
+						<input type="tel" class="form-control" required="true" id="phone" name="phone" placeholder="###-###-####" size="15,1" maxlength="15">
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label for="messagebody" class="control-label col-xs-12 col-sm-2">Message</label>
 					<div class="col-xs-12 col-sm-5">
-						<textarea class="form-control" required="true" id="messagebody" name="body" placeholder="Your Message" rows="5" cols="55"></textarea>
+						<textarea class="form-control" required="true" id="messagebody" name="messagebody" placeholder="Your message" minlength="3" rows="5" cols="55"></textarea>
 					</div>
 				</div>
 
@@ -403,14 +403,18 @@
 				
 				<div class="form-group">
 					<div class="col-xs-offset-3 col-xs-9">
-						<input type="button" class="btn btn-primary" id="submit_btn" value="Submit">
+						<input type="submit" class="btn btn-primary submit" id="submit_btn" value="Send">
 						<input type="reset" class="btn btn-default" value="Reset">
 					</div>
 				</div>
 
 			</form>
 			</div>
-			<div id="contactResults">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-sm-offset-2">
+					<div id="contactResults">
+					</div>
+				</div>
 			</div>
 		</div>
 	 </div>
