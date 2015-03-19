@@ -67,7 +67,7 @@ $(document).ready(function(){
 				//get input field values data to be sent to server
 				post_data = {
 					'sender_name'   : $('input[name=sender_name]').val(), 
-					'email'    		: $('input[name=email]').val(), 
+					'email'    		: $('input[name=inputEmail]').val(), 
 					'phone'  		: $('input[name=phone]').val(), 
 					'subject'       : $('select[name=subject]').val(), 
 					'body'          : $('textarea[name=messagebody]').val(),
