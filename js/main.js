@@ -87,8 +87,6 @@ $(document).ready(function(){
 					}
 					$("#contact #contactResults").hide().html(output).slideDown();
 				}, 'json');
-
-				return false;
 			},
 		}
 	);

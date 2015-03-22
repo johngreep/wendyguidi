@@ -100,12 +100,16 @@ if($_POST)
     $sender = "$sender_name <".$email.">";
 
     //email body
-    $message_body = "Message to www.wendyguidi.com from $sender_name :\n" .
-                    "----------------\n\n$body\n\n----------------\nPhone Number: ".$phone."\nIP:$ip\n";
+    $message_body = "<html><body><h2>Message to www.wendyguidi.com from $sender_name :</h2>" .
+                    "<div style='border:1px solid black;padding:15px;'>$body</div>".
+                    "<br/><strong>Phone Number: </strong>".formatPhone($phone)."<br/>".
+                    "IP:$ip<br/></body></html>";
 
     //proceed with PHP email.
     $headers = 'From: '.$email.'' . "\r\n" .
     'Reply-To: '. $sender . "\r\n" .
+    'MIME-Version: 1.0' . "\r\n" .
+    'Content-type: text/html; charset=iso-8859-1' . "\r\n".
     'X-Mailer: PHP/' . phpversion();
     
     $send_mail = mail($to_email, "[wendyguidi.com] " . $subject, $message_body, $headers);
@@ -116,8 +120,17 @@ if($_POST)
         $output = json_encode(array('type'=>'error', 'text' => 'Could not send mail! Please check your PHP mail configuration.'));
         die($output);
     }else{
-        $output = json_encode(array('type'=>'message', 'text' => 'Hi '.$sender_name .'!<br/> Thank you for your email'));
+        $output = json_encode(array('type'=>'message', 'text' => 'Hi '.$sender_name .'!<br/> Thank you for your message.'));
         die($output);
     }
+}
+
+function formatPhone ($data) {
+    if(  preg_match( '/^\+\d(\d{3})(\d{3})(\d{4})$/', $data,  $matches ) )
+    {
+        $result = $matches[1] . '-' .$matches[2] . '-' . $matches[3];
+        return $result;
+    }
+    return $data;
 }
 ?>
