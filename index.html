@@ -9,6 +9,12 @@
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.min.js"></script>
   </head>
   <body>
 	<div class="container" id="banner">
@@ -391,13 +397,7 @@
 				<div class="form-group">
 					<label for="recaptcha_challenge_field" class="control-label col-xs-12 col-sm-2">Verification</label>
 					<div class="col-xs-12 col-sm-5">
-						<script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6LdXse8SAAAAAFyhC2tRTXiDRqYzig7u5BUYqaRf"></script>
-
-						<noscript>
-							<iframe src="http://www.google.com/recaptcha/api/noscript?k=6LdXse8SAAAAAFyhC2tRTXiDRqYzig7u5BUYqaRf" height="300" width="500" frameborder="0"></iframe><br/>
-							<textarea name="recaptcha_challenge_field" rows="3" cols="40" id="recaptcha_challenge_field"></textarea>
-							<input type="hidden" name="recaptcha_response_field" value="manual_challenge"/>
-						</noscript>
+						<div class="g-recaptcha" data-sitekey="6LdXse8SAAAAAFyhC2tRTXiDRqYzig7u5BUYqaRf"></div>
 					</div>
 				</div>
 				
@@ -468,12 +468,5 @@
 		</div>
 	  </div>
 	</div>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
-	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js"></script>
-
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/main.min.js"></script>
   </body>
 </html>

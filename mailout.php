@@ -1,5 +1,5 @@
 <?php
-    if($_SERVER['HTTP_ORIGIN'] == "http://wendyguidi.com")
+    if($_SERVER['HTTP_ORIGIN'] == "http://www.wendyguidi.com")
     {
         header('Access-Control-Allow-Origin: http://wendyguidi.com');
     }
@@ -15,7 +15,7 @@
         echo "<ul>",
                 "<li>If accessed from <code>http://wendyguidi.com</code> it performs its function.</li>";
         echo " <li>If accessed from any other origin including from simply typing in the URL into the browser's address bar,";
-        echo "you get this HTML document</li>", 
+        echo "you get this HTML document</li>",
             "</ul>",
         "</body>",
         "</html>";
@@ -23,10 +23,6 @@
     }
     
     // http://www.sanwebe.com/2011/12/making-simple-jquery-ajax-contact-form
-
-    require_once('recaptchalib.php');
-    $privatekey = "6LdXse8SAAAAALuSpyS4P9YVYhEM6m1gmjyND29r";
-
 
 if($_POST)
 {    
@@ -40,14 +36,14 @@ if($_POST)
         die($output); //exit script outputting json data
     } 
 
-    $resp = recaptcha_check_answer ($privatekey,
-                                $_SERVER["REMOTE_ADDR"],
-                                $_POST["recaptcha_challenge_field"],
-                                $_POST["recaptcha_response_field"]);
-    
-    if (!$resp->is_valid) {
-        // What happens when the CAPTCHA was entered incorrectly
-        $output = json_encode(array('type'=>'error', 'text' => "The reCAPTCHA wasn't entered correctly. (" . $resp->error . ")"));
+    $recaptchaResponse = $_POST['grecaptcharesponse'];
+    $secretKey = '6LdXse8SAAAAALuSpyS4P9YVYhEM6m1gmjyND29r';
+    $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$recaptchaResponse}&remoteip={$_SERVER['REMOTE_ADDR']}");
+    $obj = json_decode($response, true);
+    if($obj['success'] != true)
+    {
+        //error handling
+        $output = json_encode(array('type'=>'error', 'text' => "The reCAPTCHA wasn't entered correctly. (" . implode(', ',$obj['error-codes']). ")"));
         die($output);
     }
 
