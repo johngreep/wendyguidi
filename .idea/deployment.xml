@@ -5,7 +5,7 @@
       <paths name="wendyguidi dev">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/DEV" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

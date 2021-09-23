@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="72579f3e-52f6-4edf-8457-8575c9462e6a" name="wendyguidi dev" url="http://wendyguidi.com">
+      <webServer id="72579f3e-52f6-4edf-8457-8575c9462e6a" name="wendyguidi dev" url="">
         <fileTransfer host="wendyguidi.com" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
