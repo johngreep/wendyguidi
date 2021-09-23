@@ -4,534 +4,607 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wendy Guidi, RMT - Massage Therapist</title>
+  <title>Villa Guidi - Wellness Center - MASSAGE THERAPY</title>
 
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="css/main.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
-  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
   <script src="js/main.min.js"></script>
 </head>
 
 <body>
-<div class="container" id="banner">
-  <div class="innerContainer">
-    <h1>Wendy Guidi, <small> RMT<br>&nbsp;&nbsp;&nbsp;&nbsp;Massage Therapist</small></h1>
-    <ul class="nav nav-tabs nav-justified" role="tablist">
-      <li class="active" role="presentation"><a data-toggle="tab" href="#about">About</a></li>
-      <li role="presentation"><a data-toggle="tab" href="#therapies">Therapies</a></li>
-      <li role="presentation"><a data-toggle="tab" href="#certificates">Certificates</a></li>
-      <li role="presentation"><a data-toggle="tab" href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="tab-content">
-  <div id="about" class="tab-pane fade in active">
-    <div class="container">
-      <div class="innerContainer">
-        <div class="row">
-          <div class="col-xs-12">
-            <h2>Experience the Benefits of Massage Therapy</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <ul>
-              <li>Rehabilitation of Injury (sports, motor vehicle accident, over-use, etc.)</li>
-              <li>Pre and Post Pregnancy</li>
-              <li>Post-Surgical Rehabilitation</li>
-              <li>Migraines</li>
-              <li>Postural Retraining</li>
-              <li>Exercise Therapy</li>
-              <li>Pre and Post Sports Therapy (performance improvement, reduction of injury during training)</li>
-              <li>Fibromyalgia</li>
-              <li>Chronic Pain Conditions</li>
-              <li>Plantar Fascitis</li>
-              <li>Lymphoedema</li>
-              <li>Pre and Post Pregnancy</li>
-              <li>Carpal Tunnel</li>
-              <li>Post-Traumatic Stress Syndrome</li>
-              <li>Craniosacral Therapy</li>
-            </ul>
-            <p>...and sometimes I get to do a relaxation massage!</p>
-            <p>We also offer a range of massage products including massage cream and gift certificates.</p>
-            <p>Wendy is dedicated, highly skilled, and provides attentive professional massage therapy.</p>
-            <ul>
-              <li>23 years experience in rehab</li>
-              <li>2200 hours in training</li>
-              <li>8 levels of CranioSacral Therapy training</li>
-              <li>Immune Response Work (CST)</li>
-              <li>Member of the Massage Therapist Association of Alberta (MTAA)</li>
-            </ul>
-            <p>The MTAA has a 2200 hour minimum training requirement and is recognized by the Canadian Massage Therapy
-              Alliance. It is the oldest association of massage therapists in Alberta.</p>
-          </div>
-        </div>
-      </div>
+<div class="container" id="page-wrapper">
+  <div class="container" id="banner">
+    <div class="innerContainer">
+      <div class="title">Villa Guidi - Wellness Center</div>
+      <div class="subtitle">MASSAGE THERAPY</div>
+      <ul class="nav nav-tabs nav-justified" id="mainTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home_tab" data-bs-toggle="tab" data-bs-target="#home" aria-controls="home"
+                  aria-selected="true">Home
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="about_tab" data-bs-toggle="tab" data-bs-target="#about" aria-controls="about"
+                  aria-selected="false">About
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="therapies_tab" data-bs-toggle="tab" data-bs-target="#therapies"
+                  aria-controls="therapies" aria-selected="false">Therapies
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="rates_tab" data-bs-toggle="tab" data-bs-target="#rates" aria-controls="rates"
+                  aria-selected="false">Rates&nbsp;&&nbsp;Booking
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="certificates_tab" data-bs-toggle="tab" data-bs-target="#certificates"
+                  aria-controls="certificates" aria-selected="false">Certificates
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact_tab" data-bs-toggle="tab" data-bs-target="#contact"
+                  aria-controls="contact"
+                  aria-selected="false">Contact
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 
-  <div id="therapies" class="tab-pane fade in">
-    <div class="container">
-      <div class="innerContainer">
-        <div class="row">
-          <div class="col-xs-12">
-            <h2>Therapies</h2>
-            <p>How can we treat such a wide range of conditions?</p>
+  <div class="tab-content container">
 
-            <p>Our therapists are constantly upgrading and expanding their knowledge. Check out a few of the courses and
-              specialties (click on one to learn more):</p>
-            <div class="row">
-              <div id="therapiesAccordion" class="panel-group col-xs-12 col-sm-9 col-md-6">
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#cstTherapy">Craniosacral
-                        Therapy I and II</a>
-                    </h4>
-                  </div>
-                  <div id="cstTherapy" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                      <p>CST is a gentle, hands-on method of evaluating and enhancing the functioning of a physiological
-                        body system called the craniosacral system - comprised of the membranes and cerebrospinal fluid
-                        that surround and protect the brain and spinal cord.</p>
-                    </div>
-                  </div>
-                </div>
-
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#serTherapy">Somato Emotional
-                        Release Therapy I and II</a>
-                    </h4>
-                  </div>
-                  <div id="serTherapy" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>SER is a therapeutic process that uses and expands on the principles of CranioSacral Therapy to
-                        help rid the mind and body of the residual effects of trauma. SERI offers applications designed
-                        to enhance results using CST and other complementary therapies.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#serTherapy2">Trauma Release
-                        Therapy</a>
-                    </h4>
-                  </div>
-                  <div id="serTherapy2" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>SER is a therapeutic process that uses and expands on the principles of CranioSacral Therapy to
-                        help rid the mind and body of the residual effects of trauma. SERI offers applications designed
-                        to enhance results using CST and other complementary therapies.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#braingym">Brain Gym</a>
-                    </h4>
-                  </div>
-                  <div id="braingym" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>Brain Gym is a program of physical movements that enhance learning and performance in ALL
-                        areas. It includes 26 easy and enjoyable targeted activities that integrate body and mind to
-                        bring about rapid and often dramatic improvements in concentration, memory, reading, writing,
-                        organizing, listening, physical coordination, and more. </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#stoneMassage">Hot Stone
-                        Therapy</a>
-                    </h4>
-                  </div>
-                  <div id="stoneMassage" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>Hot stone massage has been used by many cultures for thousands of years. The application of
-                        heat to the body and the relaxing effects this has on muscles and the nervous system has been
-                        recognised by numerous ancient civilisations.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#cuppingMassage">Cupping
-                        Massage</a>
-                    </h4>
-                  </div>
-                  <div id="cuppingMassage" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>A Cupping Massage combines massage movements with negative pressure using a suction device on
-                        the skin. A cup is positioned at the area to be treated and a vacuum is created within the cup
-                        to draw the skin and underlying tissue into the cup. The vacuum and suction effect increases
-                        blood and lymphatic circulation systemically and to the local area, relaxing muscle tissue,
-                        drawing stagnation, pathogenic factors and toxins out of the body and releasing a myriad of pain
-                        causing factors.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#braingymK">Educational
-                        Kinesiology</a>
-                    </h4>
-                  </div>
-                  <div id="braingymK" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>Kinesiology is &quot;the study of movement.&quot; Educational Kinesiology (or Edu-K) is the
-                        study and application of natural movement experiences to facilitate learning. It focuses on the
-                        performance of specific physical activities that activate the brain for optimal storage and
-                        retrieval of information.</p>
-
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#mldt">Manual Lymphatic
-                        Drainage</a>
-                    </h4>
-                  </div>
-                  <div id="mldt" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>Using exacting anatomical science and distinctive manual processes, Lymphatic Drainage Therapy
-                        enables practitioners to detect the specific rhythm, direction, depth and quality of the lymph
-                        flow anywhere in the body. From there they can use their hands to perform Manual Lymphatic
-                        Mapping (MLM) of the vessels to assess overall circulation and determine the best alternate
-                        pathways for draining body-fluid stagnations.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#vm">Visceral Manipulation Ia
-                        and Ib</a>
-                    </h4>
-                  </div>
-                  <div id="vm" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>Visceral Manipulation is a gentle hands-on therapy that works through the body's visceral
-                        system (the heart, liver, intestines and other internal organs) to locate and alleviate abnormal
-                        points of tension throughout the body.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#MET">Muscle Energy Therapy</a>
-                    </h4>
-                  </div>
-                  <div id="MET" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>Reciprocal Inhibition is when the therapist uses a client's muscle to stretch the opposing
-                        muscle.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#SCST">Strain/Counter strain</a>
-                    </h4>
-                  </div>
-                  <div id="SCST" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>An osteopathic technique which changes the interaction between dysfunctional vertebrae and
-                        reduces fascial tension and restores joint mobility.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#act1">Advanced Cranial Therapy
-                        I</a>
-                    </h4>
-                  </div>
-                  <div id="act1" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>CST is a gentle, hands-on method of evaluating and enhancing the functioning of a physiological
-                        body system called the craniosacral system - comprised of the membranes and cerebrospinal fluid
-                        that surround and protect the brain and spinal cord.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#myofascial">Myofascial
-                        Release</a>
-                    </h4>
-                  </div>
-                  <div id="myofascial" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>Myofascial Release is a highly specialized stretching technique used by physical therapists to
-                        treat patients with a variety of soft tissue problems.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#stjohnNMT">St John's
-                        Neuromuscular Therapy</a>
-                    </h4>
-                  </div>
-                  <div id="stjohnNMT" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p id="stjohnNMT-body">The St. John Method of Neuromuscular Therapy is a highly effective
-                        treatment for
-                        ridding the body of pain. A St. John Therapist's primary goal in relieving pain is to first
-                        achieve structural balance in the body. They do this by looking at the body as a
-                        four-dimensional object, and using the techniques of the St. John Method to correct distortions
-                        in the horizontal, coronal and/or mid-sagittal planes of the body. These techniques are
-                        supported by scientific neurological laws that explain how the central nervous system initiates
-                        pain responses in the body. By understanding how pain originates and by being able to locate the
-                        source of pain in the body, St. John Neuromuscular Therapists treat the CAUSE of pain (primarily
-                        musculoskeletal dysfunction) not just the effects.</p>
-                      <ul>
-                        <li>NMT 1: Cervical Injuries, Postural Analysis and Pelvic Stabilization</li>
-                        <li>NMT 2: Pain Mechanisms of the Low Back</li>
-                        <li>NMT 3: Shoulder, Upper Torso, Spinal Column and Extremities</li>
-                        <li>NMT 4: TMJ Dysfunction, Hands, Feet and Eyes</li>
-                        <li>NMT 5: Neuromuscular Components of Cranial Decompression and Scoliosis</li>
-                        <li>NMT 7: Visceral Massage and Structural Balancing</li>
-                      </ul>
-
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#therapiesAccordion" href="#SportsTherapy">Sports
-                        Therapy</a>
-                    </h4>
-                  </div>
-                  <div id="SportsTherapy" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>Sports Therapy is an aspect of healthcare that is specifically concerned with the prevention of
-                        injury and the rehabilitation of the patient back to optimum levels of functional, occupational
-                        and sports specific fitness, regardless of age and ability.</p>
-                      <p>It utilises the principles of sport and exercise sciences incorporating physiological and
-                        pathological processes to prepare the participant for training, competition and where
-                        applicable, work.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+    <div id="home" class="tab-pane fade show active">
+      <div class="container">
+        <div class="innerContainer">
+          <div class="row">
+            <div class="col">
+              <h2>Experience the Benefits of Massage Therapy</h2>
             </div>
-
-            <p class="noind"><em>...and of course we also do relaxation massage!</em></p>
-
-            <p>These courses and special interests are over and above the basic 2200 hour training course
-              requirement.</p>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="certificates" class="tab-pane fade in">
-    <div class="container">
-      <div class="innerContainer">
-        <div class="row">
-          <div class="col-xs-12">
-            <h2>Gift Certificates</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-6">
-            <p>Need a gift for the special person in your life?</p>
-            <p>Want a gift that says I care about you?</p>
-            <p>Why not give a gift certificate for massage?</p>
-            <p>Gift certificates can be paid for over the phone with a credit card and mailed to your recipient or can
-              be picked up at the clinic.</p>
           </div>
           <div class="row">
-            <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
-              <div class="panel panel-default">
+            <div class="col">
+              <ul>
+                <li>Rehabilitation of Injury (sports, motor vehicle accident, over-use, etc.)</li>
+                <li>Pre and Post Pregnancy</li>
+                <li>Post-Surgical Rehabilitation</li>
+                <li>Migraines</li>
+                <li>Postural Retraining</li>
+                <li>Pre and Post Sports Therapy (performance improvement, reduction of injury during training)</li>
+                <li>Fibromyalgia</li>
+                <li>Chronic Pain Conditions</li>
+                <li>Plantar Fascitis</li>
+                <li>Lymphoedema</li>
+                <li>Pre and Post Pregnancy</li>
+                <li>Carpal Tunnel</li>
+                <li>Post-Traumatic Stress Syndrome</li>
+                <li>Craniosacral Therapy</li>
+              </ul>
+              <p>...and sometimes I get to do a relaxation massage!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="tab-pane fade">
+      <div class="container">
+        <div class="innerContainer">
+          <div class="row">
+            <div class="col">
+              <p>Wendy and her team are dedicated, highly skilled, and provides attentive professional massage
+                therapy.</p>
+              <ul>
+                <li>32 years experience in rehab</li>
+                <li>2200 hours in training</li>
+                <li>8 levels of CranioSacral Therapy training</li>
+                <li>Immune Response Work (CST)</li>
+                <li>Member of the Massage Therapist Association of Alberta (MTAA)</li>
+              </ul>
+              <p>The MTAA has a 2200 hour minimum training requirement and is recognized by the Canadian Massage Therapy
+                Alliance. It is the oldest association of massage therapists in Alberta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="therapies" class="tab-pane fade">
+      <div class="container">
+        <div class="innerContainer">
+          <div class="row">
+            <div class="col">
+              <h2>Therapies</h2>
+              <p>How can we treat such a wide range of conditions?</p>
+
+              <p>Our therapists are constantly upgrading and expanding their knowledge. Check out a few of the courses
+                and
+                specialties (click on one to learn more):</p>
+
+              <div class="row">
+                <div id="therapiesAccordion" class="accordion">
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingCstTherapy">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#cstTherapy" aria-expanded="true" aria-controls="cstTherapy">
+                        Craniosacral Therapy I and II
+                      </button>
+                    </h4>
+                    <div id="cstTherapy" class="accordion-collapse collapse show" aria-labelledby="headingCstTherapy"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>CST is a gentle, hands-on method of evaluating and enhancing the functioning of a
+                          physiological
+                          body system called the craniosacral system - comprised of the membranes and cerebrospinal
+                          fluid
+                          that surround and protect the brain and spinal cord.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingSerTherapy">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#serTherapy" aria-expanded="true" aria-controls="serTherapy">
+                        Somato Emotional Release Therapy I and II
+                      </button>
+                    </h4>
+                    <div id="serTherapy" class="accordion-collapse collapse" aria-labelledby="headingSerTherapy"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>SER is a therapeutic process that uses and expands on the principles of CranioSacral Therapy
+                          to
+                          help rid the mind and body of the residual effects of trauma. SERI offers applications
+                          designed
+                          to enhance results using CST and other complementary therapies.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingSerTherapy2">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#serTherapy2" aria-expanded="true" aria-controls="serTherapy2">
+                        Trauma Release Therapy
+                      </button>
+                    </h4>
+                    <div id="serTherapy2" class="panel-collapse collapse" aria-labelledby="headingSerTherapy2"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>SER is a therapeutic process that uses and expands on the principles of CranioSacral Therapy
+                          to
+                          help rid the mind and body of the residual effects of trauma. SERI offers applications
+                          designed
+                          to enhance results using CST and other complementary therapies.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingBrainGym">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#brainGym" aria-expanded="true" aria-controls="brainGym">
+                        Brain Gym
+                      </button>
+                    </h4>
+                    <div id="brainGym" class="panel-collapse collapse" aria-labelledby="headingBrainGym"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>Brain Gym is a program of physical movements that enhance learning and performance in ALL
+                          areas. It includes 26 easy and enjoyable targeted activities that integrate body and mind to
+                          bring about rapid and often dramatic improvements in concentration, memory, reading, writing,
+                          organizing, listening, physical coordination, and more.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingCuppingMassage">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#cuppingMassage" aria-expanded="true" aria-controls="cuppingMassage">
+                        Cupping Massage
+                      </button>
+                    </h4>
+                    <div id="cuppingMassage" class="panel-collapse collapse" aria-labelledby="headingCuppingMassage"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>A Cupping Massage combines massage movements with negative pressure using a suction device on
+                          the skin. A cup is positioned at the area to be treated and a vacuum is created within the cup
+                          to draw the skin and underlying tissue into the cup. The vacuum and suction effect increases
+                          blood and lymphatic circulation systemically and to the local area, relaxing muscle tissue,
+                          drawing stagnation, pathogenic factors and toxins out of the body and releasing a myriad of
+                          pain
+                          causing factors.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingBrainGymK">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#braingymK" aria-expanded="true" aria-controls="braingymK">
+                        Educational Kinesiology
+                      </button>
+                    </h4>
+                    <div id="braingymK" class="panel-collapse collapse" aria-labelledby="headingBrainGymK"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>Kinesiology is &quot;the study of movement.&quot; Educational Kinesiology (or Edu-K) is the
+                          study and application of natural movement experiences to facilitate learning. It focuses on
+                          the
+                          performance of specific physical activities that activate the brain for optimal storage and
+                          retrieval of information.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingMldt">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#mldt" aria-expanded="true" aria-controls="mldt">
+                        Manual Lymphatic Drainage
+                      </button>
+                    </h4>
+                    <div id="mldt" class="panel-collapse collapse" aria-labelledby="headingMldt"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>Using exacting anatomical science and distinctive manual processes, Lymphatic Drainage
+                          Therapy
+                          enables practitioners to detect the specific rhythm, direction, depth and quality of the lymph
+                          flow anywhere in the body. From there they can use their hands to perform Manual Lymphatic
+                          Mapping (MLM) of the vessels to assess overall circulation and determine the best alternate
+                          pathways for draining body-fluid stagnations.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingVm">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#vm" aria-expanded="true" aria-controls="vm">
+                        Visceral Manipulation Ia and Ib
+                      </button>
+                    </h4>
+                    <div id="vm" class="panel-collapse collapse" aria-labelledby="headingVm"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>Visceral Manipulation is a gentle hands-on therapy that works through the body's visceral
+                          system (the heart, liver, intestines and other internal organs) to locate and alleviate
+                          abnormal
+                          points of tension throughout the body.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingMet">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#MET" aria-expanded="true" aria-controls="MET">
+                        Muscle Energy Therapy
+                      </button>
+                    </h4>
+                    <div id="MET" class="panel-collapse collapse" aria-labelledby="headingMet"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>Reciprocal Inhibition is when the therapist uses a client's muscle to stretch the opposing
+                          muscle.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingScst">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#SCST" aria-expanded="true" aria-controls="SCST">
+                        Strain/Counter strain
+                      </button>
+                    </h4>
+                    <div id="SCST" class="panel-collapse collapse" aria-labelledby="headingScst"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>An osteopathic technique which changes the interaction between dysfunctional vertebrae and
+                          reduces fascial tension and restores joint mobility.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingAct1">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#act1" aria-expanded="true" aria-controls="act1">
+                        Advanced Cranial Therapy I
+                      </button>
+                    </h4>
+                    <div id="act1" class="panel-collapse collapse" aria-labelledby="headingAct1"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>CST is a gentle, hands-on method of evaluating and enhancing the functioning of a
+                          physiological
+                          body system called the craniosacral system - comprised of the membranes and cerebrospinal
+                          fluid
+                          that surround and protect the brain and spinal cord.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingMyofascial">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#myofascial" aria-expanded="true" aria-controls="myofascial">
+                        Myofascial Release
+                      </button>
+                    </h4>
+                    <div id="myofascial" class="panel-collapse collapse" aria-labelledby="headingMyofascial"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>Myofascial Release is a highly specialized stretching technique used by physical therapists
+                          to
+                          treat patients with a variety of soft tissue problems.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingStJohnNmt">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#stjohnNMT" aria-expanded="true" aria-controls="stjohnNMT">
+                        St John's Neuromuscular Therapy
+                      </button>
+                    </h4>
+                    <div id="stjohnNMT" class="panel-collapse collapse" aria-labelledby="headingStJohnNmt"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p id="stjohnNMT-body">The St. John Method of Neuromuscular Therapy is a highly effective
+                          treatment for
+                          ridding the body of pain. A St. John Therapist's primary goal in relieving pain is to first
+                          achieve structural balance in the body. They do this by looking at the body as a
+                          four-dimensional object, and using the techniques of the St. John Method to correct
+                          distortions
+                          in the horizontal, coronal and/or mid-sagittal planes of the body. These techniques are
+                          supported by scientific neurological laws that explain how the central nervous system
+                          initiates
+                          pain responses in the body. By understanding how pain originates and by being able to locate
+                          the
+                          source of pain in the body, St. John Neuromuscular Therapists treat the CAUSE of pain
+                          (primarily
+                          musculoskeletal dysfunction) not just the effects.</p>
+                        <ul>
+                          <li>NMT 1: Cervical Injuries, Postural Analysis and Pelvic Stabilization</li>
+                          <li>NMT 2: Pain Mechanisms of the Low Back</li>
+                          <li>NMT 3: Shoulder, Upper Torso, Spinal Column and Extremities</li>
+                          <li>NMT 4: TMJ Dysfunction, Hands, Feet and Eyes</li>
+                          <li>NMT 5: Neuromuscular Components of Cranial Decompression and Scoliosis</li>
+                          <li>NMT 7: Visceral Massage and Structural Balancing</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingSportsTherapy">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#SportsTherapy" aria-expanded="true" aria-controls="SportsTherapy">
+                        Sports Therapy
+                      </button>
+                    </h4>
+                    <div id="SportsTherapy" class="panel-collapse collapse" aria-labelledby="headingSportsTherapy"
+                         data-bs-parent="#therapiesAccordion">
+                      <div class="accordion-body">
+                        <p>Sports Therapy is an aspect of healthcare that is specifically concerned with the prevention
+                          of
+                          injury and the rehabilitation of the patient back to optimum levels of functional,
+                          occupational
+                          and sports specific fitness, regardless of age and ability.</p>
+                        <p>It utilises the principles of sport and exercise sciences incorporating physiological and
+                          pathological processes to prepare the participant for training, competition and where
+                          applicable, work.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <p class="noind"><em>...and of course we also do relaxation massage!</em></p>
+
+              <p>These courses and special interests are over and above the basic 2200 hour training course
+                requirement.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="rates" class="tab-pane fade">
+      <div class="container">
+        <div class="innerContainer">
+          <div class="row">
+            <div class="col-xs-12">
+              <h2>By Appointment Only</h2>
+            </div>
+          </div>
+          <div class="row align-items-start">
+            <div class="col">
+              <address>403-813-7962 (call or text)<br>
+                wendy@wendyguidi.com
+              </address>
+            </div>
+            <div class="col-4">
+              <div class="panel panel-default rates-panel">
                 <div class="panel-heading">
                   <h3 class="panel-title">Rates</h3>
                 </div>
                 <div class="panel-body">
                   <ul>
-                    <li>120 minutes: $165.00</li>
-                    <li>90 minutes: $135.00</li>
-                    <li>60 minutes: $95.00</li>
-                    <li>30 minutes: $65.00</li>
+                    <li>120&nbsp;minutes:&nbsp;$165.00</li>
+                    <li>90&nbsp;minutes:&nbsp;$140.00</li>
+                    <li>60&nbsp;minutes:&nbsp;$95.00</li>
+                    <li>30&nbsp;minutes:&nbsp;$65.00</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xs-12">
-            Please phone and order your gift certificates before you come so that we may have them ready for you.
-            Phone or fax us: (403) 220-1410
+        </div>
+      </div>
+    </div>
+
+    <div id="certificates" class="tab-pane fade">
+      <div class="container">
+        <div class="innerContainer">
+          <div class="row">
+            <div class="col">
+              <h2>Gift Certificates</h2>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col">
+              <p>Gift certificates are available.</p>
+              <p>Payment by e-transfer accepted.</p>
+            </div>
+            <div class="col-4">
+              <div class="panel panel-default rates-panel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Rates</h3>
+                </div>
+                <div class="panel-body">
+                  <ul>
+                    <li>120&nbsp;minutes:&nbsp;$165.00</li>
+                    <li>90&nbsp;minutes:&nbsp;$140.00</li>
+                    <li>60&nbsp;minutes:&nbsp;$95.00</li>
+                    <li>30&nbsp;minutes:&nbsp;$65.00</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="tab-pane fade">
+      <div class="container">
+        <div class="innerContainer">
+          <div class="row">
+            <div class="col-xs-12">
+              <h2>Contact</h2>
+              <div id="contactBody">
+                <form id="contactForm" class="form-horizontal" method="post" action="">
+
+                  <div class="form-group">
+                    <label for="subject" class="control-label col-xs-12 col-sm-2">Subject</label>
+                    <div class="col-xs-12 col-sm-5">
+                      <select id="subject" name="subject" class="form-control">
+                        <option selected="selected" value="Request for Information">Request for Information</option>
+                        <option value="Product Inquiry">Product Inquiry</option>
+                        <option value="Webmaster">Web Page Comment</option>
+                        <option value="Other Inquiry">Other Inquiry</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="sender_name" class="control-label col-xs-12 col-sm-2">Name</label>
+                    <div class="col-xs-12 col-sm-5">
+                      <input type="text" class="form-control" required id="sender_name" name="sender_name"
+                             placeholder="Your Name" size="30,1" maxlength="50">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputEmail" class="control-label col-xs-12 col-sm-2">Email</label>
+                    <div class="col-xs-12 col-sm-5">
+                      <input type="email" class="form-control" required id="inputEmail" name="inputEmail"
+                             placeholder="example@domain.com" size="30,1" maxlength="50">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone" class="control-label col-xs-12 col-sm-2">Phone</label>
+                    <div class="col-xs-12 col-sm-5">
+                      <input type="tel" class="form-control" required id="phone" name="phone"
+                             placeholder="###-###-####" size="15,1" maxlength="15">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="messagebody" class="control-label col-xs-12 col-sm-2">Message</label>
+                    <div class="col-xs-12 col-sm-5">
+                    <textarea class="form-control" required id="messagebody" name="messagebody"
+                              placeholder="Your message" minlength="3" rows="5" cols="55"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="recaptcha_challenge_field" class="control-label col-xs-12 col-sm-2">Verification</label>
+                    <div class="col-xs-12 col-sm-5">
+                      <div class="g-recaptcha" data-sitekey="6LdXse8SAAAAAFyhC2tRTXiDRqYzig7u5BUYqaRf"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-xs-offset-3 col-xs-9">
+                      <input type="submit" class="btn btn-primary submit" id="submit_btn" value="Send">
+                      <input type="reset" class="btn btn-default" value="Reset">
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-2">
+                  <div id="contactResults">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="contact" class="tab-pane fade in">
-    <div class="container">
-      <div class="innerContainer">
-        <div class="row">
-          <div class="col-xs-12">
-            <h2>Contact</h2>
-            <div id="contactBody">
-              <form id="contactForm" class="form-horizontal" method="post" action="">
-
-                <div class="form-group">
-                  <label for="subject" class="control-label col-xs-12 col-sm-2">Subject</label>
-                  <div class="col-xs-12 col-sm-5">
-                    <select id="subject" name="subject" class="form-control">
-                      <option selected="selected" value="Request for Information">Request for Information</option>
-                      <option value="Product Inquiry">Product Inquiry</option>
-                      <option value="Webmaster">Web Page Comment</option>
-                      <option value="Other Inquiry">Other Inquiry</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="sender_name" class="control-label col-xs-12 col-sm-2">Name</label>
-                  <div class="col-xs-12 col-sm-5">
-                    <input type="text" class="form-control" required="true" id="sender_name" name="sender_name"
-                           placeholder="Your Name" size="30,1" maxlength="50">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="inputEmail" class="control-label col-xs-12 col-sm-2">Email</label>
-                  <div class="col-xs-12 col-sm-5">
-                    <input type="email" class="form-control" required="true" id="inputEmail" name="inputEmail"
-                           placeholder="example@domain.com" size="30,1" maxlength="50">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="phone" class="control-label col-xs-12 col-sm-2">Phone</label>
-                  <div class="col-xs-12 col-sm-5">
-                    <input type="tel" class="form-control" required="true" id="phone" name="phone"
-                           placeholder="###-###-####" size="15,1" maxlength="15">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="messagebody" class="control-label col-xs-12 col-sm-2">Message</label>
-                  <div class="col-xs-12 col-sm-5">
-                    <textarea class="form-control" required="true" id="messagebody" name="messagebody"
-                              placeholder="Your message" minlength="3" rows="5" cols="55"></textarea>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="recaptcha_challenge_field" class="control-label col-xs-12 col-sm-2">Verification</label>
-                  <div class="col-xs-12 col-sm-5">
-                    <div class="g-recaptcha" data-sitekey="6LdXse8SAAAAAFyhC2tRTXiDRqYzig7u5BUYqaRf"></div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="col-xs-offset-3 col-xs-9">
-                    <input type="submit" class="btn btn-primary submit" id="submit_btn" value="Send">
-                    <input type="reset" class="btn btn-default" value="Reset">
-                  </div>
-                </div>
-
-              </form>
-            </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-sm-offset-2">
-                <div id="contactResults">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-5 col-sm-offset-2">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Rates</h3>
-              </div>
-              <div class="panel-body">
-                <ul>
-                  <li>120 minutes: $165.00</li>
-                  <li>90 minutes: $135.00</li>
-                  <li>60 minutes: $95.00</li>
-                  <li>30 minutes: $65.00</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  <div id="footer">
+    <div class="container well" id="mtaa">
+      <div class="row">
+        <div class="col align-self-left wellTitle">
+          By appointment only
         </div>
       </div>
-    </div>
-
-    <div id="footer">
-      <div class="container well" id="mtaa">
-        <div class="row">
-          <div class="col-xs-12">
-            <h4>By appointment only. Please phone</h4>
-          </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-3 align-self-left">
+          <address>
+            <strong>Wendy Guidi, RMT</strong><br>
+            Rocky Ridge NW Calgary, AB<br>
+            <strong>Joe Rich</strong><br>
+            Kelowna, BC
+          </address>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <address>
-              <strong>Wendy Guidi, RMT</strong><br>
-              Discovery Ridge Blvd SW Calgary, AB
-            </address>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <address>403-220-1410<br>
-              wendy@wendyguidi.com
-            </address>
-          </div>
-          <div class="col-sm-12 col-md-4 text-right">
-            <p>Member of the <a href="http://www.mtaalberta.com\">Massage Therapist<br>Association of Alberta (MTAA)</a>
-            </p>
-          </div>
+        <div class="col-xs-12 col-md-4 align-self-left">
+          <address>wendy@wendyguidi.com<br>
+            403-813-7963 (call or text)
+          </address>
         </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <p>Website designed and hosted by <a href="http://www.johngreep.com">John Greep</a></p>
-          </div>
+        <div class="col-xs-12 col-md-12 text-end align-bottom">
+          <p>Member of the <a href="https://www.mtaalberta.com">Massage Therapist Association of Alberta (MTAA)</a>
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-xs-12 col-md-6 text-end">
+          <p>Website designed and hosted by <a href="https://www.johngreep.com">John V. Greep</a></p>
         </div>
       </div>
     </div>
